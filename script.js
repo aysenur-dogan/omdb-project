@@ -6,7 +6,13 @@ const errorMessage = document.getElementById("errorMessage");
 const apiKey = "1f57f9e";
 
 searchBtn.addEventListener("click", searchMovie);
+movieInput.addEventListener("keypress", (event) => {
 
+    if (event.key === "Enter") {
+        searchMovie();
+    }
+
+});
 async function searchMovie() {
 
     const movieName = movieInput.value.trim();
