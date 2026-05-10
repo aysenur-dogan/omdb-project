@@ -61,3 +61,25 @@ button:hover {
     border-radius: 10px;
     margin-bottom: 20px;
 }
+@media (max-width: 600px) {
+    .container {
+        margin: 30px auto;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    #movieContainer img {
+        width: 200px;
+    }
+}
