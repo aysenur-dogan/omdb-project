@@ -32,7 +32,7 @@ async function searchMovie() {
         }
 
         errorMessage.textContent = "";
-
+        localStorage.setItem("lastMovie", movieName);
         movieContainer.innerHTML = `
             <h2>${data.Title}</h2>
             <img src="${data.Poster !== "N/A" ? data.Poster : ""}" alt="${data.Title}">
@@ -47,3 +47,11 @@ async function searchMovie() {
 
     }
 }
+window.addEventListener("load", () => {
+    const lastMovie = localStorage.getItem("lastMovie");
+
+    if (lastMovie) {
+        movieInput.value = lastMovie;
+        searchMovie();
+    }
+});
