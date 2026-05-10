@@ -1,5 +1,7 @@
 # OMDB Movie Search Project
 
+A simple movie search application built with HTML, CSS, and JavaScript using the OMDB API.
+
 ## How to Set Up Your Repository
 
 **WARNING**: This is a template project. Do not fork this repository.
